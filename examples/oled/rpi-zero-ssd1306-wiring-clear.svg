@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Raspberry Pi Zero / Zero 2 W と 0.96インチ OLED の配線図</title>
+  <desc id="desc">Pi ZeroのGPIO全体を左に示し、物理ピン1、3、5、6を色分けしてSSD1306 OLEDへ接続する図。</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#172033" flood-opacity="0.16"/>
+    </filter>
+    <marker id="red-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#e52b2b"/>
+    </marker>
+    <marker id="gray-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#8b8f94"/>
+    </marker>
+    <marker id="green-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#55bf7b"/>
+    </marker>
+    <marker id="orange-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#f28b3c"/>
+    </marker>
+    <style>
+      .jp { font-family: "Noto Sans JP", "Noto Sans CJK JP", Meiryo, sans-serif; fill: #172033; }
+      .title { font-size: 34px; font-weight: 700; }
+      .subtitle { font-size: 16px; fill: #77808b; }
+      .card-title { font-size: 23px; font-weight: 700; }
+      .card-subtitle { font-size: 15px; fill: #74808b; }
+      .table-head { font-size: 14px; fill: #66717d; }
+      .pin-no { font-size: 17px; font-weight: 700; }
+      .pin-label { font-size: 13px; }
+      .wire-label { font-size: 16px; font-weight: 700; paint-order: stroke; stroke: #ffffff; stroke-width: 6px; stroke-linejoin: round; }
+      .small { font-size: 14px; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="#ffffff"/>
+
+  <!-- Source badge from the reference illustration. -->
+  <rect x="1095" y="35" width="405" height="54" rx="27" fill="#f3f5f8"/>
+  <circle cx="1121" cy="62" r="14" fill="#0e6d9b"/>
+  <text x="1121" y="68" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#ffffff">S</text>
+  <text x="1145" y="69" font-family="sans-serif" font-size="18" font-weight="700" fill="#1674bd">https://sozorablog.com/gpio_pinout/</text>
+
+  <text x="80" y="115" class="jp title">Raspberry Pi Zero / Zero 2 W と 0.96インチ OLED</text>
+  <text x="80" y="143" class="jp subtitle">SSD1306・128×64・I²C・40ピンGPIO全体とOLED配線</text>
+
+  <!-- Wires, drawn before the panels to preserve the clean reference-style layout. -->
+  <path d="M 330 271 C 480 271, 570 198, 735 207 C 900 216, 1015 235, 1435 278" fill="none" stroke="#e52b2b" stroke-width="7" stroke-linecap="round" marker-end="url(#red-arrow)"/>
+  <path d="M 730 322 C 900 322, 1015 345, 1435 370" fill="none" stroke="#8b8f94" stroke-width="7" stroke-linecap="round" marker-end="url(#gray-arrow)"/>
+  <path d="M 330 322 C 520 322, 650 350, 820 389 C 995 429, 1110 448, 1435 455" fill="none" stroke="#55bf7b" stroke-width="7" stroke-linecap="round" marker-end="url(#green-arrow)"/>
+  <path d="M 330 296 C 520 296, 670 360, 830 421 C 1000 487, 1120 514, 1435 540" fill="none" stroke="#f28b3c" stroke-width="7" stroke-linecap="round" marker-end="url(#orange-arrow)"/>
+
+  <!-- Pi Zero / GPIO card -->
+  <g filter="url(#shadow)">
+    <rect x="55" y="185" width="760" height="690" rx="26" fill="#fbfdff" stroke="#238cff" stroke-width="3"/>
+    <text x="95" y="225" class="jp card-title">Raspberry Pi Zero / Zero 2 W</text>
+    <text x="95" y="249" class="jp card-subtitle">40ピンGPIOヘッダー全体｜上から物理ピン1・2</text>
+  </g>
+  <text x="105" y="282" class="jp table-head">左列：奇数ピン</text>
+  <text x="420" y="282" class="jp table-head">右列：偶数ピン</text>
+
+  <!-- Empty GPIO row markers. -->
+  <g fill="#ffffff" stroke="#dce2e8" stroke-width="1.5">
+    <circle cx="330" cy="271" r="9"/><circle cx="730" cy="271" r="9"/>
+    <circle cx="330" cy="296" r="9"/><circle cx="730" cy="296" r="9"/>
+    <circle cx="330" cy="322" r="9"/><circle cx="730" cy="322" r="9"/>
+    <circle cx="330" cy="347" r="9"/><circle cx="730" cy="347" r="9"/>
+    <circle cx="330" cy="373" r="9"/><circle cx="730" cy="373" r="9"/>
+    <circle cx="330" cy="398" r="9"/><circle cx="730" cy="398" r="9"/>
+    <circle cx="330" cy="424" r="9"/><circle cx="730" cy="424" r="9"/>
+    <circle cx="330" cy="449" r="9"/><circle cx="730" cy="449" r="9"/>
+    <circle cx="330" cy="475" r="9"/><circle cx="730" cy="475" r="9"/>
+    <circle cx="330" cy="500" r="9"/><circle cx="730" cy="500" r="9"/>
+    <circle cx="330" cy="526" r="9"/><circle cx="730" cy="526" r="9"/>
+    <circle cx="330" cy="551" r="9"/><circle cx="730" cy="551" r="9"/>
+    <circle cx="330" cy="577" r="9"/><circle cx="730" cy="577" r="9"/>
+    <circle cx="330" cy="602" r="9"/><circle cx="730" cy="602" r="9"/>
+    <circle cx="330" cy="628" r="9"/><circle cx="730" cy="628" r="9"/>
+    <circle cx="330" cy="653" r="9"/><circle cx="730" cy="653" r="9"/>
+    <circle cx="330" cy="679" r="9"/><circle cx="730" cy="679" r="9"/>
+    <circle cx="330" cy="704" r="9"/><circle cx="730" cy="704" r="9"/>
+    <circle cx="330" cy="730" r="9"/><circle cx="730" cy="730" r="9"/>
+    <circle cx="330" cy="755" r="9"/><circle cx="730" cy="755" r="9"/>
+  </g>
+
+  <!-- Highlight the four connected pins. -->
+  <circle cx="330" cy="271" r="12" fill="#e52b2b"/>
+  <circle cx="330" cy="296" r="12" fill="#f28b3c"/>
+  <circle cx="330" cy="322" r="12" fill="#55bf7b"/>
+  <circle cx="730" cy="322" r="12" fill="#8b8f94"/>
+
+  <!-- GPIO labels, odd column. -->
+  <g class="jp pin-label">
+    <text x="105" y="276" class="pin-no">1</text><text x="145" y="276">3V3</text>
+    <text x="105" y="301" class="pin-no">3</text><text x="145" y="301">GPIO2 / SDA1</text>
+    <text x="105" y="327" class="pin-no">5</text><text x="145" y="327">GPIO3 / SCL1</text>
+    <text x="105" y="352">7</text><text x="145" y="352">GPIO4 / GPCLK0</text>
+    <text x="105" y="378">9</text><text x="145" y="378">GND</text>
+    <text x="105" y="403">11</text><text x="145" y="403">GPIO17</text>
+    <text x="105" y="429">13</text><text x="145" y="429">GPIO27</text>
+    <text x="105" y="454">15</text><text x="145" y="454">GPIO22</text>
+    <text x="105" y="480">17</text><text x="145" y="480">3V3</text>
+    <text x="105" y="505">19</text><text x="145" y="505">GPIO10 / MOSI0</text>
+    <text x="105" y="531">21</text><text x="145" y="531">GPIO9 / MISO0</text>
+    <text x="105" y="556">23</text><text x="145" y="556">GPIO11 / SCLK0</text>
+    <text x="105" y="582">25</text><text x="145" y="582">GND</text>
+    <text x="105" y="607">27</text><text x="145" y="607">GPIO0 / ID_SD</text>
+    <text x="105" y="633">29</text><text x="145" y="633">GPIO5</text>
+    <text x="105" y="658">31</text><text x="145" y="658">GPIO6</text>
+    <text x="105" y="684">33</text><text x="145" y="684">GPIO13</text>
+    <text x="105" y="709">35</text><text x="145" y="709">GPIO19 / PCM_FS</text>
+    <text x="105" y="735">37</text><text x="145" y="735">GPIO26</text>
+    <text x="105" y="760">39</text><text x="145" y="760">GND</text>
+  </g>
+  <!-- GPIO labels, even column. -->
+  <g class="jp pin-label">
+    <text x="420" y="276" class="pin-no">2</text><text x="460" y="276">5V</text>
+    <text x="420" y="301">4</text><text x="460" y="301">5V</text>
+    <text x="420" y="327">6</text><text x="460" y="327">GND</text>
+    <text x="420" y="352">8</text><text x="460" y="352">GPIO14 / TXD0</text>
+    <text x="420" y="378">10</text><text x="460" y="378">GPIO15 / RXD0</text>
+    <text x="420" y="403">12</text><text x="460" y="403">GPIO18 / PCM_CLK</text>
+    <text x="420" y="429">14</text><text x="460" y="429">GND</text>
+    <text x="420" y="454">16</text><text x="460" y="454">GPIO23</text>
+    <text x="420" y="480">18</text><text x="460" y="480">GPIO24</text>
+    <text x="420" y="505">20</text><text x="460" y="505">GND</text>
+    <text x="420" y="531">22</text><text x="460" y="531">GPIO25</text>
+    <text x="420" y="556">24</text><text x="460" y="556">GPIO8 / CE0</text>
+    <text x="420" y="582">26</text><text x="460" y="582">GPIO7 / CE1</text>
+    <text x="420" y="607">28</text><text x="460" y="607">GPIO1 / ID_SC</text>
+    <text x="420" y="633">30</text><text x="460" y="633">GND</text>
+    <text x="420" y="658">32</text><text x="460" y="658">GPIO12</text>
+    <text x="420" y="684">34</text><text x="460" y="684">GND</text>
+    <text x="420" y="709">36</text><text x="460" y="709">GPIO16</text>
+    <text x="420" y="735">38</text><text x="460" y="735">GPIO20 / PCM_DIN</text>
+    <text x="420" y="760">40</text><text x="460" y="760">GPIO21 / PCM_DOUT</text>
+  </g>
+
+  <!-- Wire labels in the open space, matching the reference image. -->
+  <text x="820" y="211" class="jp wire-label" fill="#e52b2b">3.3V → VCC</text>
+  <text x="825" y="357" class="jp wire-label" fill="#62666b">GND → GND</text>
+  <text x="795" y="433" class="jp wire-label" fill="#3ca967">GPIO3 / SCL → SCL</text>
+  <text x="805" y="517" class="jp wire-label" fill="#d56e24">GPIO2 / SDA → SDA</text>
+
+  <!-- OLED card and its connector in the same top-to-bottom order as the reference. -->
+  <g filter="url(#shadow)">
+    <rect x="1110" y="250" width="390" height="390" rx="22" fill="#f1f1f1" stroke="#d2d2d2" stroke-width="3"/>
+    <rect x="1170" y="305" width="255" height="170" rx="8" fill="#e6e6e6" stroke="#d2d2d2" stroke-width="8"/>
+    <rect x="1190" y="325" width="215" height="130" fill="#fafafa" stroke="#dbdbdb"/>
+    <path d="M1205 412 L1232 378 L1260 410 L1288 370 L1316 405 L1344 374 L1388 420" fill="none" stroke="#f28b3c" stroke-width="5"/>
+    <text x="1298" y="504" text-anchor="middle" class="jp small" fill="#526075">SSD1306</text>
+    <text x="1298" y="527" text-anchor="middle" class="jp small" fill="#8a939d">I²C / 128×64</text>
+    <text x="1445" y="300" text-anchor="end" class="jp small" fill="#51565b">VCC</text>
+    <text x="1445" y="395" text-anchor="end" class="jp small" fill="#51565b">GND</text>
+    <text x="1445" y="480" text-anchor="end" class="jp small" fill="#51565b">SCL</text>
+    <text x="1445" y="575" text-anchor="end" class="jp small" fill="#51565b">SDA</text>
+  </g>
+  <circle cx="1435" cy="278" r="12" fill="#e52b2b"/>
+  <circle cx="1435" cy="370" r="12" fill="#8b8f94"/>
+  <circle cx="1435" cy="455" r="12" fill="#55bf7b"/>
+  <circle cx="1435" cy="540" r="12" fill="#f28b3c"/>
+
+  <rect x="80" y="805" width="735" height="45" rx="12" fill="#fff4d6" stroke="#e3ae38"/>
+  <text x="105" y="835" class="jp small" fill="#8a5a00">VCCは3.3V（物理ピン1）。OLED側の実物印字を優先し、SDA↔SDA、SCL↔SCLで接続。</text>
+</svg>
