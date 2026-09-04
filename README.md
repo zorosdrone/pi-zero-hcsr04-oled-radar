@@ -6,11 +6,15 @@ Raspberry Pi Zero 2 W、HC-SR04系超音波距離センサー、SG90サーボ、
 
 ## デモ動画
 
-- [レーダー走査とOLED表示](https://github.com/zorosdrone/pi-zero-hcsr04-oled-radar/releases/download/v1.0.0-radar-demo/radar-sweep-oled-demo-v1.0.0.mov)
-- [OLED表示のクローズアップ](https://github.com/zorosdrone/pi-zero-hcsr04-oled-radar/releases/download/v1.0.0-radar-demo/radar-oled-display-demo-v1.0.0.mov)
-- [Release v1.0.0-radar-demo](https://github.com/zorosdrone/pi-zero-hcsr04-oled-radar/releases/tag/v1.0.0-radar-demo)
+### レーダー走査とOLED表示
 
-動画はGit履歴へ含めず、GitHub Releaseの添付ファイルとして配布します。公開前は上のリンクが未作成です。
+[![レーダー走査とOLED表示をYouTubeで再生](https://img.youtube.com/vi/QK99JPKq6U8/hqdefault.jpg)](https://www.youtube.com/watch?v=QK99JPKq6U8)
+
+### OLED表示のクローズアップ（Short）
+
+[![OLED表示のクローズアップをYouTubeで再生](https://img.youtube.com/vi/qSEfqi-cBqI/hqdefault.jpg)](https://www.youtube.com/shorts/qSEfqi-cBqI)
+
+サムネイルをクリックするとYouTubeで再生します。動画はGit履歴へ含めず、原動画は[Release v1.0.0-radar-demo](https://github.com/zorosdrone/pi-zero-hcsr04-oled-radar/releases/tag/v1.0.0-radar-demo)の添付ファイルとしても配布します。
 
 ## 主な仕様
 
