@@ -67,6 +67,12 @@ python3 src/hc_sr04_radar_test_v4.py
 
 ## 公開準備状態
 
-コードと公開用文書の初回整理まで完了しています。ライセンス決定、最終監査、独立Git履歴の作成、GitHub公開はまだ行っていません。
+コードと公開用文書を独立Git履歴として整理し、私有GitHubリポジトリへ反映済みです。公開前に実機・動画・外部素材の最終確認を行います。
 
 途中版のレーダー実装（Ver1〜Ver3）は公開対象外です。完成版Ver4の理解と再現に必要な単体テスト、サーボ校正、OLED確認用スクリプトは残しています。
+
+## ライセンス
+
+- `src/`、`examples/`、`scripts/` の自作コード: [MIT License](LICENSE)
+- 自作の文書、図、写真、およびGitHub Releaseに添付する自作デモ動画: [CC BY 4.0](LICENSE-DOCUMENTATION.md)
+- 依存パッケージ・外部参照資料・同梱していない素材: [NOTICE.md](NOTICE.md) を参照
