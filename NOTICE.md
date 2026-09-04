@@ -17,3 +17,8 @@ GPIO mapping against your hardware before use.
 
 No third-party CAD/model files, downloaded datasets, or pre-trained models are
 included. They are outside both licenses in this repository.
+
+The physical SG90 servo case uses MakerWorld's
+[SG90 Servo Case Gen2](https://makerworld.com/ja/models/2088712-sg90-servo-case-gen2#profileId-2257653).
+The model file is not redistributed here; its terms and print settings must be
+checked at the source.
